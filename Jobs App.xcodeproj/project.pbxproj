@@ -54,14 +54,150 @@
 		946D70D022F3B03B00929B64 /* Jobs App */ = {
 			isa = PBXGroup;
 			children = (
-				946D70D122F3B03B00929B64 /* AppDelegate.swift */,
-				946D70D322F3B03B00929B64 /* ViewController.swift */,
-				946D70D522F3B03B00929B64 /* Main.storyboard */,
-				946D70D822F3B03D00929B64 /* Assets.xcassets */,
-				946D70DA22F3B03D00929B64 /* LaunchScreen.storyboard */,
-				946D70DD22F3B03D00929B64 /* Info.plist */,
+				946D70E722F3B27B00929B64 /* Resources */,
+				946D70E622F3B26D00929B64 /* Controllers */,
+				946D70E522F3B26000929B64 /* Constants */,
+				946D70E422F3B25600929B64 /* Base */,
+				946D70E322F3B23E00929B64 /* Application */,
 			);
 			path = "Jobs App";
+			sourceTree = "<group>";
+		};
+		946D70E322F3B23E00929B64 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				946D70F322F3B30100929B64 /* Publication */,
+				946D70F222F3B2F900929B64 /* Profile */,
+				946D70F122F3B2F200929B64 /* Message */,
+				946D70EF22F3B2E000929B64 /* Main */,
+				946D70EE22F3B2D300929B64 /* Home */,
+				946D70ED22F3B2CA00929B64 /* Comment */,
+				946D70EA22F3B2A300929B64 /* Authentication */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		946D70E422F3B25600929B64 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				946D70DA22F3B03D00929B64 /* LaunchScreen.storyboard */,
+				946D70D122F3B03B00929B64 /* AppDelegate.swift */,
+				946D70DD22F3B03D00929B64 /* Info.plist */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		946D70E522F3B26000929B64 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		946D70E622F3B26D00929B64 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		946D70E722F3B27B00929B64 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				946D70E922F3B28700929B64 /* Colors */,
+				946D70E822F3B28400929B64 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		946D70E822F3B28400929B64 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				946D70D822F3B03D00929B64 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		946D70E922F3B28700929B64 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		946D70EA22F3B2A300929B64 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				946D70EC22F3B2B900929B64 /* Sign Up */,
+				946D70EB22F3B2B200929B64 /* Sign In */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		946D70EB22F3B2B200929B64 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		946D70EC22F3B2B900929B64 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		946D70ED22F3B2CA00929B64 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		946D70EE22F3B2D300929B64 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		946D70EF22F3B2E000929B64 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				946D70F022F3B2E500929B64 /* Main */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		946D70F022F3B2E500929B64 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				946D70D322F3B03B00929B64 /* ViewController.swift */,
+				946D70D522F3B03B00929B64 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		946D70F122F3B2F200929B64 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		946D70F222F3B2F900929B64 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		946D70F322F3B30100929B64 /* Publication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Publication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZMX3C2B594;
-				INFOPLIST_FILE = "Jobs App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Jobs App/Base/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -303,7 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZMX3C2B594;
-				INFOPLIST_FILE = "Jobs App/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Jobs App/Base/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
