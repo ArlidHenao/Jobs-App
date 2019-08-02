@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ifV-ne-LNZ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DETALLES-->
+        <scene sceneID="PYC-Bc-jbk">
+            <objects>
+                <viewController id="yt6-Zh-33z" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aMJ-0A-2lG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRf-Bi-Jdb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icono-usuario" translatesAutoresizingMaskIntoConstraints="NO" id="9sY-5E-U0W">
+                                        <rect key="frame" x="20" y="40" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="8U6-I2-oRF"/>
+                                            <constraint firstAttribute="width" constant="100" id="iVL-vr-2LK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arlid Henao Rueda" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nS-uT-Ygj">
+                                        <rect key="frame" x="140" y="72" width="161" height="36.5"/>
+                                        <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="q58-pd-ySL">
+                                        <rect key="frame" x="20" y="180" width="374" height="400"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="400" id="hcn-qR-cXT"/>
+                                        </constraints>
+                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed.</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0nS-uT-Ygj" firstAttribute="centerY" secondItem="9sY-5E-U0W" secondAttribute="centerY" id="22N-Wp-L0J"/>
+                                    <constraint firstItem="9sY-5E-U0W" firstAttribute="top" secondItem="LRf-Bi-Jdb" secondAttribute="top" constant="40" id="BPP-wG-Psq"/>
+                                    <constraint firstItem="9sY-5E-U0W" firstAttribute="leading" secondItem="LRf-Bi-Jdb" secondAttribute="leading" constant="20" id="UwY-1F-kjO"/>
+                                    <constraint firstItem="q58-pd-ySL" firstAttribute="top" secondItem="9sY-5E-U0W" secondAttribute="bottom" constant="40" id="WYu-Ee-fQF"/>
+                                    <constraint firstItem="q58-pd-ySL" firstAttribute="leading" secondItem="LRf-Bi-Jdb" secondAttribute="leading" constant="20" id="XF9-3e-cxL"/>
+                                    <constraint firstItem="0nS-uT-Ygj" firstAttribute="leading" secondItem="9sY-5E-U0W" secondAttribute="trailing" constant="20" id="boN-Mn-R2i"/>
+                                    <constraint firstAttribute="trailing" secondItem="q58-pd-ySL" secondAttribute="trailing" constant="20" id="zVK-Ld-rFH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LRf-Bi-Jdb" firstAttribute="top" secondItem="Spv-4v-5Ir" secondAttribute="top" id="Ml6-ee-2zC"/>
+                            <constraint firstItem="Spv-4v-5Ir" firstAttribute="trailing" secondItem="LRf-Bi-Jdb" secondAttribute="trailing" id="aDn-ce-fRv"/>
+                            <constraint firstItem="LRf-Bi-Jdb" firstAttribute="leading" secondItem="Spv-4v-5Ir" secondAttribute="leading" id="nYE-9y-8J1"/>
+                            <constraint firstItem="Spv-4v-5Ir" firstAttribute="bottom" secondItem="LRf-Bi-Jdb" secondAttribute="bottom" id="qgV-E4-D9U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Spv-4v-5Ir"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="DETALLES" id="m5k-80-knH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bm6-V0-7Mr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281.15942028985512" y="11.383928571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iEw-wn-ZcR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ifV-ne-LNZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="hnN-Y3-6LE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="GreenColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="36"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yt6-Zh-33z" kind="relationship" relationship="rootViewController" id="H8Y-fe-AXQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ihl-b2-GPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-628.98550724637687" y="11.383928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icono-usuario" width="60" height="60"/>
+        <namedColor name="GreenColor">
+            <color red="0.62352941176470589" green="0.74117647058823533" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
