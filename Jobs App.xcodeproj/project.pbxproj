@@ -33,6 +33,7 @@
 		946D711F22F3B95F00929B64 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946D711E22F3B95F00929B64 /* SignUp.swift */; };
 		946D712122F3B97E00929B64 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946D712022F3B97E00929B64 /* SignUpViewController.swift */; };
 		946D712322F3BA3800929B64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946D712222F3BA3800929B64 /* Assets.xcassets */; };
+		947EF98022F3BF02003C0E06 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 947EF97F22F3BF02003C0E06 /* Cartfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		946D711E22F3B95F00929B64 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		946D712022F3B97E00929B64 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		946D712222F3BA3800929B64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		947EF97F22F3BF02003C0E06 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		E38C57086FC5FC80D9341848 /* Pods_Jobs_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jobs_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E853BD4B629A93EDFE3D683F /* Pods-Jobs App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobs App.debug.xcconfig"; path = "Target Support Files/Pods-Jobs App/Pods-Jobs App.debug.xcconfig"; sourceTree = "<group>"; };
 		ED98B9833097D1EAD37D2F2C /* Pods-Jobs App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobs App.release.xcconfig"; path = "Target Support Files/Pods-Jobs App/Pods-Jobs App.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,13 +88,13 @@
 				E853BD4B629A93EDFE3D683F /* Pods-Jobs App.debug.xcconfig */,
 				ED98B9833097D1EAD37D2F2C /* Pods-Jobs App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		946D70C522F3B03B00929B64 = {
 			isa = PBXGroup;
 			children = (
+				947EF97F22F3BF02003C0E06 /* Cartfile */,
 				946D70D022F3B03B00929B64 /* Jobs App */,
 				946D70CF22F3B03B00929B64 /* Products */,
 				095125EE72634992938A31D2 /* Pods */,
@@ -348,6 +350,7 @@
 				946D70DC22F3B03D00929B64 /* LaunchScreen.storyboard in Resources */,
 				946D711D22F3B95500929B64 /* SignUp.storyboard in Resources */,
 				946D710122F3B86A00929B64 /* Publication.storyboard in Resources */,
+				947EF98022F3BF02003C0E06 /* Cartfile in Resources */,
 				946D70F722F3B71B00929B64 /* Colors.xcassets in Resources */,
 				946D711522F3B91B00929B64 /* CommentDetailStoryboard.storyboard in Resources */,
 				946D711122F3B90D00929B64 /* Comment.storyboard in Resources */,
