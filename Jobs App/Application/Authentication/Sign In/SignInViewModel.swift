@@ -7,8 +7,8 @@
 //
 
 import UIKit
-//import FBSDKLoginKit
-//import FirebaseAuth
+import FBSDKLoginKit
+import FirebaseAuth
 
 typealias SignInHandler = ( (_ success: Bool, _ error: Error?) -> Void )
 
@@ -16,25 +16,19 @@ class SignInViewModel: NSObject {
     
     
     //funciòn para iniciar sesion con facebook
-    //static func facebookLogin(viewController: UIViewController, handler: SignInHandler?){
-        //LoginManager().logIn(readPermissions: ["email"], from: UIViewController()) { (result, error) in
-            //if let error = error {
-                //handler?(false, error)
-                //return
-            //}
+    static func facebookLogin(viewController: UIViewController, handler: SignInHandler?) {
+        FBSDKLoginManager().logIn(withReadPermissions: ["email"], from: viewController) { (result, error) in
+            if let error = error {
+                handler?(false, error)
+                return
+            }
             
-            //guard let token = AccessToken.current?.tokenString
-                //else {
-                    //return
-               // }
-            //let credentials = FacebookAuthProvider.credential(withAccessToken: token)
-            //Auth.auth().signInAndRetrieveData(with: credentials, completion: { (AuthResult, error) in
-                //if let error = error {
-                    //handler?(false, error)
-                    //return
-                //}
-                //handler?(true, nil)
-            //})
-        //}
-    //}
+            guard let token = FBSDKAccessToken.current()?.tokenString else { return }
+            let credentials = FacebookAuthProvider.credential(withAccessToken: token)
+            Auth.auth().signIn(with: credentials, completion: { (authResult, error) in
+                
+                handler?(true, nil)
+            })
+        }
+    }
 }

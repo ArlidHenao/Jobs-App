@@ -9,5 +9,6 @@ target 'Jobs App' do
   
   pod 'Firebase/Analytics'
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 
 end

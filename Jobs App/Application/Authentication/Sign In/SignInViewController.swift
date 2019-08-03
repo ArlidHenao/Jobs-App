@@ -11,8 +11,6 @@ import UIKit
 //import FirebaseAuth
 
 class SignInViewController: UIViewController {
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
     
     // Aqui se administra el splash screem
     //let revealingSplashScreem = RevealingSplashView(iconImage: UIImage(named: "LaunchScreen")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: UIColor.white)
@@ -29,6 +27,23 @@ class SignInViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func facebookLogin(_ sender: Any) {
+        SignInViewModel.facebookLogin(viewController: self, handler: { [weak self] (success, error) in
+            if let error = error {
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                alert.addAction(ok)
+                self?.present(alert, animated: true, completion: nil)
+                return
+            }
+            
+            if success {
+                self?.performSegue(withIdentifier: "goToMain", sender: self)
+            }
+        })
+    }
+    
     
     // funcion para el pop-up para verificar que se ingresen los datos en email y passworid
     //func showAlert(tittle: String, message: String){

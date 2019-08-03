@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="Tps-01-4sv">
             <objects>
-                <viewController id="kMW-HX-DTW" sceneMemberID="viewController">
+                <viewController id="kMW-HX-DTW" customClass="SignInViewController" customModule="Jobs_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i0L-QN-PGA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,6 +68,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="facebookLogin:" destination="kMW-HX-DTW" eventType="touchUpInside" id="iFq-IU-5ja"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lo-ea-WHf">
                                         <rect key="frame" x="102" y="0.0" width="86" height="50"/>
@@ -154,7 +157,7 @@
                                                             <color key="titleColor" name="RedColor"/>
                                                         </state>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMk-8h-pjO">
+                                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="goToMain" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMk-8h-pjO">
                                                         <rect key="frame" x="20" y="255" width="374" height="45"/>
                                                         <color key="backgroundColor" name="GreenColor"/>
                                                         <constraints>
@@ -178,9 +181,6 @@
                                                                 <color key="value" name="GreenShadow"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <segue destination="9y4-oe-th9" kind="presentation" id="dog-SO-MHR"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -239,10 +239,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bwF-Wi-HcH"/>
                     </view>
+                    <connections>
+                        <segue destination="9y4-oe-th9" kind="presentation" identifier="goToMain" id="aJG-NC-yEX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zx-xn-Skb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="92.753623188405811" y="87.053571428571431"/>
+            <point key="canvasLocation" x="93" y="86"/>
         </scene>
         <!--Main-->
         <scene sceneID="6fm-bO-rAh">
