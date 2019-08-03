@@ -6,5 +6,8 @@ target 'Jobs App' do
   use_frameworks!
 
   # Pods for Jobs App
+  
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Core'
 
 end

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,6 +42,9 @@
 		94A6001C22F5123C0058888D /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6001122F512000058888D /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94A6001D22F5123C0058888D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6000D22F511D90058888D /* FBSDKLoginKit.framework */; };
 		94A6001E22F5123C0058888D /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6000D22F511D90058888D /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		94A6002122F514820058888D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94A6002022F514820058888D /* GoogleService-Info.plist */; };
+		94A6002422F516970058888D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6002222F5168B0058888D /* Bolts.framework */; };
+		94A6002522F516970058888D /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6002222F5168B0058888D /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				94A6002522F516970058888D /* Bolts.framework in Embed Frameworks */,
 				94A6001A22F5123C0058888D /* FacebookLogin.framework in Embed Frameworks */,
 				94A6001C22F5123C0058888D /* FBSDKCoreKit.framework in Embed Frameworks */,
 				94A6001E22F5123C0058888D /* FBSDKLoginKit.framework in Embed Frameworks */,
@@ -95,6 +99,8 @@
 		94A6001122F512000058888D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Carthage/Build/iOS/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		94A6001322F512140058888D /* FacebookLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookLogin.framework; path = Carthage/Build/iOS/FacebookLogin.framework; sourceTree = "<group>"; };
 		94A6001522F5122B0058888D /* FacebookCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookCore.framework; path = Carthage/Build/iOS/FacebookCore.framework; sourceTree = "<group>"; };
+		94A6002022F514820058888D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		94A6002222F5168B0058888D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
 		E38C57086FC5FC80D9341848 /* Pods_Jobs_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jobs_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E853BD4B629A93EDFE3D683F /* Pods-Jobs App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobs App.debug.xcconfig"; path = "Target Support Files/Pods-Jobs App/Pods-Jobs App.debug.xcconfig"; sourceTree = "<group>"; };
 		ED98B9833097D1EAD37D2F2C /* Pods-Jobs App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobs App.release.xcconfig"; path = "Target Support Files/Pods-Jobs App/Pods-Jobs App.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +116,7 @@
 				94A6001222F512000058888D /* FBSDKCoreKit.framework in Frameworks */,
 				94A6001922F5123C0058888D /* FacebookLogin.framework in Frameworks */,
 				1BDA73298B956FB084BEC947 /* Pods_Jobs_App.framework in Frameworks */,
+				94A6002422F516970058888D /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +180,7 @@
 		946D70E422F3B25600929B64 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				94A6002022F514820058888D /* GoogleService-Info.plist */,
 				946D70DA22F3B03D00929B64 /* LaunchScreen.storyboard */,
 				946D70D122F3B03B00929B64 /* AppDelegate.swift */,
 				946D70DD22F3B03D00929B64 /* Info.plist */,
@@ -316,6 +324,7 @@
 		FC379EA1D5971A17DED13D70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94A6002222F5168B0058888D /* Bolts.framework */,
 				94A6001522F5122B0058888D /* FacebookCore.framework */,
 				94A6001322F512140058888D /* FacebookLogin.framework */,
 				94A6001122F512000058888D /* FBSDKCoreKit.framework */,
@@ -338,6 +347,7 @@
 				946D70CB22F3B03B00929B64 /* Frameworks */,
 				946D70CC22F3B03B00929B64 /* Resources */,
 				94A6001F22F5123C0058888D /* Embed Frameworks */,
+				F738FE39184719C8ECDFB0D1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,6 +409,7 @@
 				946D710922F3B89200929B64 /* Message.storyboard in Resources */,
 				946D712322F3BA3800929B64 /* Assets.xcassets in Resources */,
 				946D710D22F3B8AB00929B64 /* Home.storyboard in Resources */,
+				94A6002122F514820058888D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +436,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F738FE39184719C8ECDFB0D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jobs App/Pods-Jobs App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Jobs App/Pods-Jobs App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Jobs App/Pods-Jobs App-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
