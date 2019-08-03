@@ -34,7 +34,32 @@
 		946D712122F3B97E00929B64 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946D712022F3B97E00929B64 /* SignUpViewController.swift */; };
 		946D712322F3BA3800929B64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946D712222F3BA3800929B64 /* Assets.xcassets */; };
 		947EF98022F3BF02003C0E06 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 947EF97F22F3BF02003C0E06 /* Cartfile */; };
+		94A6001222F512000058888D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6001122F512000058888D /* FBSDKCoreKit.framework */; };
+		94A6001622F5122B0058888D /* FacebookCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6001522F5122B0058888D /* FacebookCore.framework */; };
+		94A6001822F5123C0058888D /* FacebookCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6001522F5122B0058888D /* FacebookCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		94A6001922F5123C0058888D /* FacebookLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6001322F512140058888D /* FacebookLogin.framework */; };
+		94A6001A22F5123C0058888D /* FacebookLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6001322F512140058888D /* FacebookLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		94A6001C22F5123C0058888D /* FBSDKCoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6001122F512000058888D /* FBSDKCoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		94A6001D22F5123C0058888D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6000D22F511D90058888D /* FBSDKLoginKit.framework */; };
+		94A6001E22F5123C0058888D /* FBSDKLoginKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6000D22F511D90058888D /* FBSDKLoginKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		94A6001F22F5123C0058888D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				94A6001A22F5123C0058888D /* FacebookLogin.framework in Embed Frameworks */,
+				94A6001C22F5123C0058888D /* FBSDKCoreKit.framework in Embed Frameworks */,
+				94A6001E22F5123C0058888D /* FBSDKLoginKit.framework in Embed Frameworks */,
+				94A6001822F5123C0058888D /* FacebookCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		946D70CE22F3B03B00929B64 /* Jobs App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jobs App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +90,11 @@
 		946D712022F3B97E00929B64 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		946D712222F3BA3800929B64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		947EF97F22F3BF02003C0E06 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		94A6000D22F511D90058888D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Carthage/Build/iOS/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		94A6000F22F511ED0058888D /* FBSDKCoreKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = FBSDKCoreKit.framework.dSYM; path = Carthage/Build/iOS/FBSDKCoreKit.framework.dSYM; sourceTree = "<group>"; };
+		94A6001122F512000058888D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Carthage/Build/iOS/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		94A6001322F512140058888D /* FacebookLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookLogin.framework; path = Carthage/Build/iOS/FacebookLogin.framework; sourceTree = "<group>"; };
+		94A6001522F5122B0058888D /* FacebookCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookCore.framework; path = Carthage/Build/iOS/FacebookCore.framework; sourceTree = "<group>"; };
 		E38C57086FC5FC80D9341848 /* Pods_Jobs_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jobs_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E853BD4B629A93EDFE3D683F /* Pods-Jobs App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobs App.debug.xcconfig"; path = "Target Support Files/Pods-Jobs App/Pods-Jobs App.debug.xcconfig"; sourceTree = "<group>"; };
 		ED98B9833097D1EAD37D2F2C /* Pods-Jobs App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobs App.release.xcconfig"; path = "Target Support Files/Pods-Jobs App/Pods-Jobs App.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +105,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A6001622F5122B0058888D /* FacebookCore.framework in Frameworks */,
+				94A6001D22F5123C0058888D /* FBSDKLoginKit.framework in Frameworks */,
+				94A6001222F512000058888D /* FBSDKCoreKit.framework in Frameworks */,
+				94A6001922F5123C0058888D /* FacebookLogin.framework in Frameworks */,
 				1BDA73298B956FB084BEC947 /* Pods_Jobs_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +316,11 @@
 		FC379EA1D5971A17DED13D70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94A6001522F5122B0058888D /* FacebookCore.framework */,
+				94A6001322F512140058888D /* FacebookLogin.framework */,
+				94A6001122F512000058888D /* FBSDKCoreKit.framework */,
+				94A6000F22F511ED0058888D /* FBSDKCoreKit.framework.dSYM */,
+				94A6000D22F511D90058888D /* FBSDKLoginKit.framework */,
 				E38C57086FC5FC80D9341848 /* Pods_Jobs_App.framework */,
 			);
 			name = Frameworks;
@@ -298,6 +337,7 @@
 				946D70CA22F3B03B00929B64 /* Sources */,
 				946D70CB22F3B03B00929B64 /* Frameworks */,
 				946D70CC22F3B03B00929B64 /* Resources */,
+				94A6001F22F5123C0058888D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -547,6 +587,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZMX3C2B594;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Jobs App/Base/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -567,6 +611,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZMX3C2B594;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Jobs App/Base/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
