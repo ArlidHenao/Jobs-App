@@ -17,6 +17,8 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    private var viewModel = SignInViewModel()
+    
     // Aqui se administra el splash screem
     //let revealingSplashScreem = RevealingSplashView(iconImage: UIImage(named: "LaunchScreen")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: UIColor.white)
     // fin
@@ -71,6 +73,9 @@ class SignInViewController: UIViewController {
         })
     }
     
+    @IBAction func googleLogin(_ sender: Any) {
+        
+    }
     
      //funcion para el pop-up para verificar que se ingresen los datos en email y passworid
     func showAlert(tittle: String, message: String){

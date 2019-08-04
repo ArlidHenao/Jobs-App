@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 import FirebaseAuth
+import GoogleSignIn
 
 typealias SignInHandler = ( (_ success: Bool, _ error: Error?) -> Void )
 
@@ -31,4 +32,16 @@ class SignInViewModel: NSObject {
             })
         }
     }
+    
+    func googleLogin (signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
+        withError error: NSError!) {
+            if (error == nil) {
+                // Perform any operations on signed in user here.
+            } else {
+                
+            }
+        }
+    
+
+    
 }
