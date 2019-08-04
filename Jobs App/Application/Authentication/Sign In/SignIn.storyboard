@@ -148,7 +148,7 @@
                                                         <rect key="frame" x="20" y="70" width="374" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8T-bB-ovv">
                                                         <rect key="frame" x="267" y="108" width="127" height="27"/>
@@ -181,6 +181,9 @@
                                                                 <color key="value" name="GreenShadow"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SignIn:" destination="kMW-HX-DTW" eventType="touchUpInside" id="SJT-Cd-Ffg"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -240,6 +243,8 @@
                         <viewLayoutGuide key="safeArea" id="bwF-Wi-HcH"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="UeK-XQ-srt" id="pZF-x2-GRy"/>
+                        <outlet property="passwordTextField" destination="7SF-7Q-0rd" id="LoX-uO-ALt"/>
                         <segue destination="9y4-oe-th9" kind="presentation" identifier="goToMain" id="aJG-NC-yEX"/>
                     </connections>
                 </viewController>
