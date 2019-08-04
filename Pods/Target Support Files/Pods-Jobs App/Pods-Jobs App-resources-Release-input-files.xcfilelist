@@ -1,2 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-Jobs App/Pods-Jobs App-resources.sh
-${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInAppMessagingDisplay/InAppMessagingDisplayResources.bundle
+${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle
