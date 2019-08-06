@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import RevealingSplashView
+import RevealingSplashView
 import FirebaseAuth
 import GoogleSignIn
 
@@ -20,15 +20,20 @@ class SignInViewController: UIViewController {
     private var viewModel = SignInViewModel()
     
     // Aqui se administra el splash screem
-    //let revealingSplashScreem = RevealingSplashView(iconImage: UIImage(named: "LaunchScreen")!, iconInitialSize: CGSize(width: 80, height: 80), backgroundColor: UIColor.white)
+    let revealingSplashScreem =
+        RevealingSplashView(iconImage: UIImage(
+            named: "LaunchScreen")!,
+            iconInitialSize: CGSize(width: 80, height: 80),
+            backgroundColor: UIColor.white
+    )
     // fin
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // cuando el splahs carga se hace la animacion
-        //self.view.addSubview(revealingSplashScreem)
-        //self.revealingSplashScreem.animationType = SplashAnimationType.popAndZoomOut
-        //self.revealingSplashScreem.startAnimation()
+        self.view.addSubview(revealingSplashScreem)
+        self.revealingSplashScreem.animationType = SplashAnimationType.popAndZoomOut
+        self.revealingSplashScreem.startAnimation()
         //fin
         
         // Do any additional setup after loading the view.
@@ -73,17 +78,6 @@ class SignInViewController: UIViewController {
         })
     }
     
-    @IBAction func googleLogin(_ sender: Any) {
-        
-    }
-    
-     //funcion para el pop-up para verificar que se ingresen los datos en email y passworid
-    func showAlert(tittle: String, message: String){
-        let alertViewEmail = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
-        alertViewEmail.addAction(UIAlertAction(title: Constants.Texts.SignIn.titlePopUp, style: .default, handler: nil))
-        self.present(alertViewEmail, animated: true, completion: nil)
-    }
-    //fin
     
     //funcion que valida los campos de la interfaz de login
     private func areFieldsValid() -> Bool {
@@ -108,6 +102,15 @@ class SignInViewController: UIViewController {
         
         return true
     }
+    //fin
+    
+    //funcion para el pop-up para verificar que se ingresen los datos en email y passworid
+    func showAlert(tittle: String, message: String){
+        let alertViewEmail = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
+        alertViewEmail.addAction(UIAlertAction(title: Constants.Texts.SignIn.titlePopUp, style: .default, handler: nil))
+        self.present(alertViewEmail, animated: true, completion: nil)
+    }
+    //fin
     
     //funcion para validar con una expresion regular si el email o password es valido
     private func validate(text: String, regex: String) -> Bool{
@@ -115,6 +118,6 @@ class SignInViewController: UIViewController {
         let regex = try? NSRegularExpression(pattern: regex)
         return regex?.firstMatch(in: text, options: [], range: range) != nil
     }
-    
+    //fin
     
 }

@@ -15,7 +15,6 @@ typealias SignInHandler = ( (_ success: Bool, _ error: Error?) -> Void )
 
 class SignInViewModel: NSObject {
     
-    
     //funciòn para iniciar sesion con facebook
     static func facebookLogin(viewController: UIViewController, handler: SignInHandler?) {
         FBSDKLoginManager().logIn(withReadPermissions: ["email"], from: viewController) { (result, error) in

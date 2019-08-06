@@ -9,35 +9,22 @@
 import UIKit
 import Firebase
 import FBSDKLoginKit
-import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate{
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-    }
-    
-
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // instanciar el inicio de sesion con facebook
         FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        //instanciar el inicio de sesión con Google
-        GIDSignIn.sharedInstance().signIn()
-        
         // instanciar las notificaciones Locales
         let _ = LocalNotificationsController()
         
         // instanciar firebase
         FirebaseApp.configure()
-        
-        // Utilice la biblioteca de Firebase para configurar las API
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
         
         // Override point for customization after application launch.
         return true
@@ -69,7 +56,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
         if FBSDKApplicationDelegate.sharedInstance()?.application(app, open: url, options: options) ?? false {
             return true
         }
-        
         return true
     }
     
