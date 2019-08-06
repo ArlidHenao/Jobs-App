@@ -156,6 +156,9 @@
                                                         <state key="normal" title="Recuperar Contraseña">
                                                             <color key="titleColor" name="RedColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="wRB-Nl-kE4" kind="presentation" id="OWH-sB-c7z"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="goToMain" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMk-8h-pjO">
                                                         <rect key="frame" x="20" y="255" width="374" height="45"/>
@@ -252,13 +255,21 @@
             </objects>
             <point key="canvasLocation" x="93" y="86"/>
         </scene>
+        <!--Recovery-->
+        <scene sceneID="OjF-et-fba">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Recovery" id="wRB-Nl-kE4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3U-Ma-Gbd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="648" y="70"/>
+        </scene>
         <!--Main-->
         <scene sceneID="6fm-bO-rAh">
             <objects>
                 <viewControllerPlaceholder storyboardName="Main" id="9y4-oe-th9" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYT-Pu-PXE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="87"/>
+            <point key="canvasLocation" x="629" y="104"/>
         </scene>
         <!--SignUp-->
         <scene sceneID="zNK-Le-yse">

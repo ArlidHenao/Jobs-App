@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1BDA73298B956FB084BEC947 /* Pods_Jobs_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38C57086FC5FC80D9341848 /* Pods_Jobs_App.framework */; };
+		9427B99C22FA35DC003D5BE6 /* Recovery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9427B99B22FA35DC003D5BE6 /* Recovery.storyboard */; };
+		9427B99E22FA36C5003D5BE6 /* RecoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9427B99D22FA36C5003D5BE6 /* RecoveryViewController.swift */; };
 		946D70D222F3B03B00929B64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946D70D122F3B03B00929B64 /* AppDelegate.swift */; };
 		946D70DC22F3B03D00929B64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 946D70DA22F3B03D00929B64 /* LaunchScreen.storyboard */; };
 		946D70F522F3B6E100929B64 /* LocalNotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946D70F422F3B6E100929B64 /* LocalNotificationsController.swift */; };
@@ -66,6 +68,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9427B99B22FA35DC003D5BE6 /* Recovery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recovery.storyboard; sourceTree = "<group>"; };
+		9427B99D22FA36C5003D5BE6 /* RecoveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryViewController.swift; sourceTree = "<group>"; };
 		946D70CE22F3B03B00929B64 /* Jobs App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Jobs App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		946D70D122F3B03B00929B64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		946D70DB22F3B03D00929B64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -130,6 +134,15 @@
 				ED98B9833097D1EAD37D2F2C /* Pods-Jobs App.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9427B99A22FA3596003D5BE6 /* Recovery */ = {
+			isa = PBXGroup;
+			children = (
+				9427B99B22FA35DC003D5BE6 /* Recovery.storyboard */,
+				9427B99D22FA36C5003D5BE6 /* RecoveryViewController.swift */,
+			);
+			path = Recovery;
 			sourceTree = "<group>";
 		};
 		946D70C522F3B03B00929B64 = {
@@ -232,6 +245,7 @@
 		946D70EA22F3B2A300929B64 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				9427B99A22FA3596003D5BE6 /* Recovery */,
 				946D70EC22F3B2B900929B64 /* Sign Up */,
 				946D70EB22F3B2B200929B64 /* Sign In */,
 			);
@@ -399,6 +413,7 @@
 			files = (
 				946D710522F3B87E00929B64 /* Profile.storyboard in Resources */,
 				946D70DC22F3B03D00929B64 /* LaunchScreen.storyboard in Resources */,
+				9427B99C22FA35DC003D5BE6 /* Recovery.storyboard in Resources */,
 				946D711D22F3B95500929B64 /* SignUp.storyboard in Resources */,
 				946D710122F3B86A00929B64 /* Publication.storyboard in Resources */,
 				947EF98022F3BF02003C0E06 /* Cartfile in Resources */,
@@ -493,6 +508,7 @@
 				946D711922F3B93C00929B64 /* SignInViewController.swift in Sources */,
 				946D712122F3B97E00929B64 /* SignUpViewController.swift in Sources */,
 				946D711322F3B91300929B64 /* CommentViewController.swift in Sources */,
+				9427B99E22FA36C5003D5BE6 /* RecoveryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
