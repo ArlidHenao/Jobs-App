@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3I7-g8-Lpk">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,7 +18,65 @@
                     <view key="view" contentMode="scaleToFill" id="FDv-EB-czd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xP5-bc-xDt">
+                                <rect key="frame" x="0.0" y="298" width="414" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cjf-OL-vj2">
+                                        <rect key="frame" x="20" y="215" width="374" height="45"/>
+                                        <color key="backgroundColor" name="GreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="wut-ir-WMg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="21"/>
+                                        <state key="normal" title="Recuperar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                <size key="value" width="0.0" height="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderUIColor">
+                                                <color key="value" name="GreenShadow"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo Electronico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QsK-5a-Oz4">
+                                        <rect key="frame" x="20" y="75" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8Jv-d4-nZD"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Cjf-OL-vj2" firstAttribute="leading" secondItem="xP5-bc-xDt" secondAttribute="leading" constant="20" id="IH1-6e-PdT"/>
+                                    <constraint firstItem="Cjf-OL-vj2" firstAttribute="top" secondItem="QsK-5a-Oz4" secondAttribute="bottom" constant="100" id="MoP-lM-dcy"/>
+                                    <constraint firstAttribute="trailing" secondItem="QsK-5a-Oz4" secondAttribute="trailing" constant="20" id="N2K-Ow-NIs"/>
+                                    <constraint firstAttribute="height" constant="300" id="bz9-16-pZE"/>
+                                    <constraint firstItem="QsK-5a-Oz4" firstAttribute="leading" secondItem="xP5-bc-xDt" secondAttribute="leading" constant="20" id="q90-Yu-uxL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cjf-OL-vj2" secondAttribute="trailing" constant="20" id="qAX-CM-znb"/>
+                                    <constraint firstAttribute="bottom" secondItem="Cjf-OL-vj2" secondAttribute="bottom" constant="40" id="xsD-ds-qGU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xP5-bc-xDt" firstAttribute="leading" secondItem="6DX-6q-AEW" secondAttribute="leading" id="0xW-jY-TvL"/>
+                            <constraint firstItem="xP5-bc-xDt" firstAttribute="centerX" secondItem="FDv-EB-czd" secondAttribute="centerX" id="Owj-Zu-9Vc"/>
+                            <constraint firstItem="6DX-6q-AEW" firstAttribute="trailing" secondItem="xP5-bc-xDt" secondAttribute="trailing" id="d6R-a9-OcL"/>
+                            <constraint firstItem="xP5-bc-xDt" firstAttribute="centerY" secondItem="FDv-EB-czd" secondAttribute="centerY" id="zJr-aG-7c1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6DX-6q-AEW"/>
                     </view>
                     <navigationItem key="navigationItem" title="RECUPERAR CONTRASEÑA" id="DS1-pJ-9Uv"/>
@@ -58,6 +116,9 @@
     <resources>
         <namedColor name="GreenColor">
             <color red="0.62352941176470589" green="0.74117647058823533" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GreenShadow">
+            <color red="0.31764705882352939" green="0.39215686274509803" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
