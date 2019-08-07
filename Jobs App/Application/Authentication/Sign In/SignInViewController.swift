@@ -23,7 +23,10 @@ class SignInViewController: UIViewController {
     let revealingSplashScreem =
         RevealingSplashView(iconImage: UIImage(
             named: "LaunchScreen")!,
-            iconInitialSize: CGSize(width: 80, height: 80),
+            iconInitialSize: CGSize(
+                width: 80,
+                height: 80
+            ),
             backgroundColor: UIColor.white
     )
     // fin
