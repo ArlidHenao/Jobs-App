@@ -42,12 +42,21 @@ struct Constants {
             
             // Boton para volver atras
             static let iconBehind = "icon-atras"
+            static let tittleCondition = "Felicitaciones"
+            static let messageCondition = "Hemos enviado un e-mail a tu cuenta arliid@hotmail.com que te servirá para cambiar tu contraseña"
+            static let buttonCondition = "Aceptar"
+            
         }
         
         struct SignUp {
             
             // Boton para volver atras
             static let iconBehind = "icon-atras"
+            
+            static let tittleCondition = "Terminos y Condiciones"
+            static let messageCondition =
+            "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever    since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,"
+            static let buttonCondition = "Aceptar"
         }
         
         struct AppDelegate {

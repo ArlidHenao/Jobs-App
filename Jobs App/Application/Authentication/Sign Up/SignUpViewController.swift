@@ -25,6 +25,17 @@ class SignUpViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func alertConditions(_ sender: Any) {
+        let alertController = UIAlertController(
+            title: Constants.Texts.SignUp.tittleCondition,
+            message: Constants.Texts.SignUp.messageCondition,
+            preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: Constants.Texts.SignUp.buttonCondition, style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     
     // se crea la funcion que llama el storyboard cuando se presiona el boton de atras (1)
     @objc func goToLogin(sender: UIButton) {
