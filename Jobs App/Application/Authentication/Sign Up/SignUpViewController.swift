@@ -46,6 +46,45 @@ class SignUpViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    // funcion que se ejecuta cuando se envia el formulario
+    @IBAction func buttonSignUp(_ sender: Any) {
+        if areFieldsValid(){
+            print("Se Registro con exito")
+        }
+    }
+    
+    //funcion que valida los campos de la interfaz de registro
+    private func areFieldsValid() -> Bool {
+        // se recibe el valor del campo
+        let name = nameTextField.text
+        let identification = identificationTextField.text
+        
+        // Se verifica que los campos no esten vacios
+        if name!.isEmpty{
+            showAlert(tittle: Constants.Texts.error, message: Constants.Texts.SignUp.fieldName)
+            return false
+        }
+        
+        if identification!.isEmpty{
+            showAlert(tittle: Constants.Texts.error, message: Constants.Texts.SignUp.fieldIdentification)
+            return false
+        }
+        
+        
+        
+        return true
+    }
+    //fin
+    
+    //funcion para el pop-up para verificar que se ingresen los datos en email y passworid
+    func showAlert(tittle: String, message: String){
+        let alertViewEmail = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
+        alertViewEmail.addAction(UIAlertAction(title: Constants.Texts.SignIn.titlePopUp, style: .default, handler: nil))
+        self.present(alertViewEmail, animated: true, completion: nil)
+    }
+    //fin
+    
+    
     
     // se crea la funcion que llama el storyboard cuando se presiona el boton de atras (1)
     @objc func goToLogin(sender: UIButton) {
