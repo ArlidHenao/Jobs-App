@@ -83,6 +83,9 @@
                         <viewLayoutGuide key="safeArea" id="6DX-6q-AEW"/>
                     </view>
                     <navigationItem key="navigationItem" title="RECUPERAR CONTRASEÑA" id="DS1-pJ-9Uv"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="QsK-5a-Oz4" id="dUT-U1-XfB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2T-Op-a7t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

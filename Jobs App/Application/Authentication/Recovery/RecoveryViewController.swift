@@ -9,7 +9,10 @@
 import UIKit
 
 class RecoveryViewController: UIViewController {
-
+    
+    //Se llaman los elementos del storiboard
+    @IBOutlet weak var emailTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,24 +27,43 @@ class RecoveryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //funcion que valida los campos de la interfaz de login
+    private func areFieldsValid() -> Bool {
+        let email = emailTextField.text
+
+        if email!.isEmpty{
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignUp.fieldEmail
+            )
+            return false
+        }
+        
+        return true
+    }
+    //fin
+    
     // Alerta que se ejecuta al oprimir el boton de recuperar
     @IBAction func alertRecovery(_ sender: Any) {
-        let alertController = UIAlertController(
-            title: Constants.Texts.Recover.tittleCondition,
-            message: Constants.Texts.Recover.messageCondition,
-            preferredStyle: .alert
-        )
-        
-        alertController.addAction(UIAlertAction(
-            title: Constants.Texts.Recover.buttonCondition,
-            style: .default)
-        )
-        
-        self.present(
-            alertController,
-            animated: true,
-            completion: nil
-        )
+        if areFieldsValid(){
+            let alertController = UIAlertController(
+                title: Constants.Texts.Recover.tittleCondition,
+                message: Constants.Texts.Recover.messageCondition,
+                preferredStyle: .alert
+            )
+            
+            alertController.addAction(UIAlertAction(
+                title: Constants.Texts.Recover.buttonCondition,
+                style: .default)
+            )
+            
+            self.present(
+                alertController,
+                animated: true,
+                completion: nil
+            )
+            
+        }
     }
     
     
@@ -52,6 +74,26 @@ class RecoveryViewController: UIViewController {
             completion: nil
         )
     }
+    
+    //funcion para el pop-up para verificar que se ingresen los datos en email y passworid
+    func showAlert(tittle: String, message: String){
+        let alertViewEmail = UIAlertController(
+            title: tittle,
+            message: message,
+            preferredStyle: .alert
+        )
+        alertViewEmail.addAction(UIAlertAction(
+            title: Constants.Texts.SignIn.titlePopUp,
+            style: .default,
+            handler: nil)
+        )
+        self.present(
+            alertViewEmail,
+            animated: true,
+            completion: nil
+        )
+    }
+    //fin
     
 
     /*
