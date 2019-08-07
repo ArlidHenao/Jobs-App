@@ -243,6 +243,16 @@
                         <viewLayoutGuide key="safeArea" id="LxD-Hu-QSm"/>
                     </view>
                     <navigationItem key="navigationItem" title="Registro" leftItemsSupplementBackButton="YES" id="A4H-i2-i0d"/>
+                    <connections>
+                        <outlet property="birthTextField" destination="3YG-1L-uIt" id="edP-Dw-mp9"/>
+                        <outlet property="cityTextField" destination="vXm-NV-zYE" id="zhp-7o-Jxh"/>
+                        <outlet property="confirmPassTextField" destination="dNJ-M9-yzC" id="iPC-5e-bZS"/>
+                        <outlet property="emailTextField" destination="GwW-Da-hdq" id="qWi-gl-JUW"/>
+                        <outlet property="identificationTextField" destination="Eed-Os-hae" id="SAb-yK-EDR"/>
+                        <outlet property="nameTextField" destination="8Xq-Zy-vPq" id="Uon-Og-KYL"/>
+                        <outlet property="numberTextField" destination="H2A-8Q-S39" id="tHT-Uh-cnO"/>
+                        <outlet property="passTextField" destination="J77-Oq-OUN" id="hGG-jP-O3q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dz-Ee-Egh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

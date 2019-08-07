@@ -10,7 +10,17 @@ import UIKit
 
 
 class SignUpViewController: UIViewController {
-
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var identificationTextField: UITextField!
+    @IBOutlet weak var birthTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var numberTextField: UITextField!
+    @IBOutlet weak var passTextField: UITextField!
+    @IBOutlet weak var confirmPassTextField: UITextField!
+    
+    //
     override func viewDidLoad() {
         super.viewDidLoad()
         
