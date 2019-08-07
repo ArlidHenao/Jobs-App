@@ -44,23 +44,36 @@ class SignInViewController: UIViewController {
         if areFieldsValid() {
             //se configura la libreria de Firebase Authentication
             //Se verifica que el correo y la contraseña sean correcto
-             Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { [weak self] (result, error) in
+             Auth.auth().signIn(
+             withEmail: emailTextField.text!,
+             password: passwordTextField.text!) { [weak self] (result, error) in
                  if error != nil {
-                    self?.showAlert(tittle: Constants.Texts.error, message: Constants.Texts.SignIn.errorSignIn)
+                    self?.showAlert(
+                        tittle: Constants.Texts.error,
+                        message: Constants.Texts.SignIn.errorSignIn)
                     return
                  }
                 // si es resultado es correcto redirecciona al Main
                 if result != nil {
-                    self?.performSegue(withIdentifier: Constants.Texts.SignIn.goToMain, sender: self)
+                    self?.performSegue(
+                        withIdentifier: Constants.Texts.SignIn.goToMain,
+                        sender: self
+                    )
                 }
             }
         }
     }
     
     @IBAction func facebookLogin(_ sender: Any) {
-        SignInViewModel.facebookLogin(viewController: self, handler: { [weak self] (success, error) in
+        SignInViewModel.facebookLogin(
+            viewController: self,
+            handler: { [weak self] (success, error) in
             if let error = error {
-                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                let alert = UIAlertController(
+                    title: "Error",
+                    message: error.localizedDescription,
+                    preferredStyle: .alert
+                )
                 let ok =
                     UIAlertAction(
                         title: Constants.Texts.SignIn.titlePopUp,
@@ -68,12 +81,19 @@ class SignInViewController: UIViewController {
                         handler: nil
                     )
                 alert.addAction(ok)
-                self?.present(alert, animated: true, completion: nil)
+                self?.present(
+                    alert,
+                    animated: true,
+                    completion: nil
+                )
                 return
             }
             
             if success {
-                self?.performSegue(withIdentifier: Constants.Texts.SignIn.goToMain, sender: self)
+                self?.performSegue(
+                    withIdentifier: Constants.Texts.SignIn.goToMain,
+                    sender: self
+                )
             }
         })
     }
@@ -82,21 +102,33 @@ class SignInViewController: UIViewController {
     //funcion que valida los campos de la interfaz de login
     private func areFieldsValid() -> Bool {
         guard let email = emailTextField.text, !email.isEmpty else {
-            showAlert(tittle: Constants.Texts.error, message: Constants.Texts.SignIn.userFieldEmpty)
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignIn.userFieldEmpty
+            )
             return false
         }
         guard let pass = passwordTextField.text, !pass.isEmpty else {
-            showAlert(tittle: Constants.Texts.error, message: Constants.Texts.SignIn.passFieldEmpty)
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignIn.passFieldEmpty
+            )
             return false
         }
         
         if !validate(text: email, regex: Constants.Texts.SignIn.expresionRegularEmail) {
-            showAlert(tittle: Constants.Texts.error, message: Constants.Texts.SignIn.errorUserField)
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignIn.errorUserField
+            )
             return false
         }
         
         if !validate(text: pass, regex: Constants.Texts.SignIn.expresionRegularPass) {
-            showAlert(tittle: Constants.Texts.error, message: Constants.Texts.SignIn.errorPassField)
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignIn.errorPassField
+            )
             return false
         }
         
@@ -106,9 +138,21 @@ class SignInViewController: UIViewController {
     
     //funcion para el pop-up para verificar que se ingresen los datos en email y passworid
     func showAlert(tittle: String, message: String){
-        let alertViewEmail = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
-        alertViewEmail.addAction(UIAlertAction(title: Constants.Texts.SignIn.titlePopUp, style: .default, handler: nil))
-        self.present(alertViewEmail, animated: true, completion: nil)
+        let alertViewEmail = UIAlertController(
+            title: tittle,
+            message: message,
+            preferredStyle: .alert
+        )
+        alertViewEmail.addAction(UIAlertAction(
+            title: Constants.Texts.SignIn.titlePopUp,
+            style: .default,
+            handler: nil)
+        )
+        self.present(
+            alertViewEmail,
+            animated: true,
+            completion: nil
+        )
     }
     //fin
     

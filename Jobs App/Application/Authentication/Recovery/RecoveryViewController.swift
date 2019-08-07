@@ -24,21 +24,33 @@ class RecoveryViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // Alerta que se ejecuta al oprimir el boton de recuperar
     @IBAction func alertRecovery(_ sender: Any) {
         let alertController = UIAlertController(
             title: Constants.Texts.Recover.tittleCondition,
             message: Constants.Texts.Recover.messageCondition,
-            preferredStyle: .alert)
+            preferredStyle: .alert
+        )
         
-        alertController.addAction(UIAlertAction(title: Constants.Texts.Recover.buttonCondition, style: .default))
+        alertController.addAction(UIAlertAction(
+            title: Constants.Texts.Recover.buttonCondition,
+            style: .default)
+        )
         
-        self.present(alertController, animated: true, completion: nil)
+        self.present(
+            alertController,
+            animated: true,
+            completion: nil
+        )
     }
     
     
     // se crea la funcion que llama el storyboard cuando se presiona el boton de atras (1)
     @objc func goToLogin(sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        dismiss(
+            animated: true,
+            completion: nil
+        )
     }
     
 
