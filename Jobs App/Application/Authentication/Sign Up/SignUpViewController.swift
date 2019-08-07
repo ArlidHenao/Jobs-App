@@ -11,6 +11,7 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
+    // Se llaman los elementos del storiboard
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var identificationTextField: UITextField!
     @IBOutlet weak var birthTextField: UITextField!
@@ -35,15 +36,25 @@ class SignUpViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    //alerta que se ejecuta al oprimir terminos y condiciones
     @IBAction func alertConditions(_ sender: Any) {
         let alertController = UIAlertController(
             title: Constants.Texts.SignUp.tittleCondition,
             message: Constants.Texts.SignUp.messageCondition,
-            preferredStyle: .alert)
+            preferredStyle: .alert
+        )
         
-        alertController.addAction(UIAlertAction(title: Constants.Texts.SignUp.buttonCondition, style: .default))
+        alertController.addAction(UIAlertAction(
+            title: Constants.Texts.SignUp.buttonCondition,
+            style: .default)
+        )
         
-        self.present(alertController, animated: true, completion: nil)
+        self.present(
+            alertController,
+            animated: true,
+            completion: nil
+        )
     }
     
     // funcion que se ejecuta cuando se envia el formulario
@@ -58,19 +69,77 @@ class SignUpViewController: UIViewController {
         // se recibe el valor del campo
         let name = nameTextField.text
         let identification = identificationTextField.text
+        let birth = birthTextField.text
+        let email = emailTextField.text
+        let city = cityTextField.text
+        let number = numberTextField.text
+        let pass = passTextField.text
+        let passConfirm = confirmPassTextField.text
         
         // Se verifica que los campos no esten vacios
         if name!.isEmpty{
-            showAlert(tittle: Constants.Texts.error, message: Constants.Texts.SignUp.fieldName)
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignUp.fieldName
+            )
             return false
         }
         
         if identification!.isEmpty{
-            showAlert(tittle: Constants.Texts.error, message: Constants.Texts.SignUp.fieldIdentification)
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignUp.fieldIdentification
+            )
             return false
         }
         
+        if birth!.isEmpty {
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignUp.fieldBirth
+            )
+            return false
+        }
         
+        if email!.isEmpty {
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignUp.fieldEmail
+            )
+            return false
+        }
+        
+        if city!.isEmpty {
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignUp.fieldCity
+            )
+            return false
+        }
+        
+        if number!.isEmpty {
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignUp.fieldNumber
+            )
+            return false
+        }
+        
+        if pass!.isEmpty {
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignUp.fieldPass
+            )
+            return false
+        }
+        
+        if passConfirm!.isEmpty {
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignUp.fieldPassConfirm
+            )
+            return false
+        }
         
         return true
     }
@@ -78,16 +147,30 @@ class SignUpViewController: UIViewController {
     
     //funcion para el pop-up para verificar que se ingresen los datos en email y passworid
     func showAlert(tittle: String, message: String){
-        let alertViewEmail = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
-        alertViewEmail.addAction(UIAlertAction(title: Constants.Texts.SignIn.titlePopUp, style: .default, handler: nil))
-        self.present(alertViewEmail, animated: true, completion: nil)
+        let alertViewEmail = UIAlertController(
+            title: tittle,
+            message: message,
+            preferredStyle: .alert
+        )
+        alertViewEmail.addAction(UIAlertAction(
+            title: Constants.Texts.SignIn.titlePopUp,
+            style: .default,
+            handler: nil)
+        )
+        self.present(
+            alertViewEmail,
+            animated: true,
+            completion: nil
+        )
     }
     //fin
     
-    
-    
     // se crea la funcion que llama el storyboard cuando se presiona el boton de atras (1)
     @objc func goToLogin(sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        dismiss(
+            animated: true,
+            completion: nil
+        )
     }
+    
 }

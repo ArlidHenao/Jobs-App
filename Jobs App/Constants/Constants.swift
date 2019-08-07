@@ -56,8 +56,14 @@ struct Constants {
             static let messageCondition =
             "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever    since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,"
             static let buttonCondition = "Aceptar"
-            static let fieldName = "El campo NOMBRE Y APELLIDOS esta vacio"
+            static let fieldName = "El campo NOMBRE esta vacio"
             static let fieldIdentification = "El campo CÉDULA esta vacio"
+            static let fieldBirth = "El campo FECHA DE NACIMIENTO esta vacio"
+            static let fieldEmail = "El campo CORREO ELECTRONICO esta vacio"
+            static let fieldCity = "El campo CITY esta vacio"
+            static let fieldNumber = "El campo CELULAR esta vacio"
+            static let fieldPass = "El campo CONTRASEÑA esta vacio"
+            static let fieldPassConfirm = "El campo CONFIRMAR CONTRASEÑA esta vacio"
         }
         
         struct AppDelegate {
