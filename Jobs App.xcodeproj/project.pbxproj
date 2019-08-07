@@ -32,7 +32,7 @@
 		946D711922F3B93C00929B64 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946D711822F3B93B00929B64 /* SignInViewController.swift */; };
 		946D711B22F3B94300929B64 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946D711A22F3B94300929B64 /* SignInViewModel.swift */; };
 		946D711D22F3B95500929B64 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 946D711C22F3B95500929B64 /* SignUp.storyboard */; };
-		946D711F22F3B95F00929B64 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946D711E22F3B95F00929B64 /* SignUp.swift */; };
+		946D711F22F3B95F00929B64 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946D711E22F3B95F00929B64 /* SignUpViewModel.swift */; };
 		946D712122F3B97E00929B64 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946D712022F3B97E00929B64 /* SignUpViewController.swift */; };
 		946D712322F3BA3800929B64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946D712222F3BA3800929B64 /* Assets.xcassets */; };
 		947EF98022F3BF02003C0E06 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 947EF97F22F3BF02003C0E06 /* Cartfile */; };
@@ -47,6 +47,7 @@
 		94A6002122F514820058888D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94A6002022F514820058888D /* GoogleService-Info.plist */; };
 		94A6002422F516970058888D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6002222F5168B0058888D /* Bolts.framework */; };
 		94A6002522F516970058888D /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6002222F5168B0058888D /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		94D3E17A22FB0C3F002555E8 /* RecoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3E17922FB0C3F002555E8 /* RecoveryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -94,7 +95,7 @@
 		946D711822F3B93B00929B64 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		946D711A22F3B94300929B64 /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		946D711C22F3B95500929B64 /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
-		946D711E22F3B95F00929B64 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		946D711E22F3B95F00929B64 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		946D712022F3B97E00929B64 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		946D712222F3BA3800929B64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		947EF97F22F3BF02003C0E06 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		94A6001522F5122B0058888D /* FacebookCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookCore.framework; path = Carthage/Build/iOS/FacebookCore.framework; sourceTree = "<group>"; };
 		94A6002022F514820058888D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94A6002222F5168B0058888D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
+		94D3E17922FB0C3F002555E8 /* RecoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryViewModel.swift; sourceTree = "<group>"; };
 		E38C57086FC5FC80D9341848 /* Pods_Jobs_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jobs_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E853BD4B629A93EDFE3D683F /* Pods-Jobs App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobs App.debug.xcconfig"; path = "Target Support Files/Pods-Jobs App/Pods-Jobs App.debug.xcconfig"; sourceTree = "<group>"; };
 		ED98B9833097D1EAD37D2F2C /* Pods-Jobs App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobs App.release.xcconfig"; path = "Target Support Files/Pods-Jobs App/Pods-Jobs App.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				9427B99B22FA35DC003D5BE6 /* Recovery.storyboard */,
 				9427B99D22FA36C5003D5BE6 /* RecoveryViewController.swift */,
+				94D3E17922FB0C3F002555E8 /* RecoveryViewModel.swift */,
 			);
 			path = Recovery;
 			sourceTree = "<group>";
@@ -266,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				946D712022F3B97E00929B64 /* SignUpViewController.swift */,
-				946D711E22F3B95F00929B64 /* SignUp.swift */,
+				946D711E22F3B95F00929B64 /* SignUpViewModel.swift */,
 				946D711C22F3B95500929B64 /* SignUp.storyboard */,
 			);
 			path = "Sign Up";
@@ -496,7 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				946D710722F3B88600929B64 /* ProfileViewController.swift in Sources */,
-				946D711F22F3B95F00929B64 /* SignUp.swift in Sources */,
+				946D711F22F3B95F00929B64 /* SignUpViewModel.swift in Sources */,
 				946D70F522F3B6E100929B64 /* LocalNotificationsController.swift in Sources */,
 				946D70D222F3B03B00929B64 /* AppDelegate.swift in Sources */,
 				946D710F22F3B8B200929B64 /* HomeViewController.swift in Sources */,
@@ -504,6 +507,7 @@
 				946D710322F3B87200929B64 /* PublicationViewController.swift in Sources */,
 				946D70FB22F3B79700929B64 /* Constants.swift in Sources */,
 				946D710B22F3B89A00929B64 /* MessageViewController.swift in Sources */,
+				94D3E17A22FB0C3F002555E8 /* RecoveryViewModel.swift in Sources */,
 				946D711B22F3B94300929B64 /* SignInViewModel.swift in Sources */,
 				946D711922F3B93C00929B64 /* SignInViewController.swift in Sources */,
 				946D712122F3B97E00929B64 /* SignUpViewController.swift in Sources */,
