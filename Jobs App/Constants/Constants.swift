@@ -48,6 +48,13 @@ struct Constants {
             
         }
         
+        struct API_INFO {
+            static let URL = "https://helpdeskmet.singleclick.co/Api/Server.php"
+            static let USR = "singleclick"
+            static let PASS = "rhinox9999sc"
+            static let KEY = "rhinox9999sc"
+        }
+        
         struct SignUp {
             
             // Boton para volver atras
@@ -64,6 +71,9 @@ struct Constants {
             static let fieldNumber = "El campo CELULAR esta vacio"
             static let fieldPass = "El campo CONTRASEÑA esta vacio"
             static let fieldPassConfirm = "El campo CONFIRMAR CONTRASEÑA esta vacio"
+            static let fieldPassConfirmDiferent = "Las CONTRASEÑAS no son iguales"
+            static let wssuccess = "Registro"
+            static let wsfailure = "Error"
         }
         
         struct AppDelegate {

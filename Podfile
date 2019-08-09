@@ -12,5 +12,6 @@ target 'Jobs App' do
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
   pod 'RevealingSplashView'
+  pod 'Alamofire', '~> 4.7'
 
 end

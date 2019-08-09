@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.8.2)
   - Firebase/Analytics (6.4.0):
     - Firebase/Core
   - Firebase/Auth (6.4.0):
@@ -77,6 +78,7 @@ PODS:
   - RevealingSplashView (0.6.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
@@ -85,6 +87,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuth
@@ -100,6 +103,7 @@ SPEC REPOS:
     - RevealingSplashView
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Firebase: 9445469655a98e9010737f4bc4720e5bda465873
   FirebaseAnalytics: 69fe25866d2ec87c6f02d72c3c9a82bce9c065a0
   FirebaseAuth: 68cfa47997f53d29ce978e7a615fb78d7925fcbe
@@ -114,6 +118,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   RevealingSplashView: 40c5a770894459736acdc95655eeba0dd30ce91c
 
-PODFILE CHECKSUM: 60492d52df6a0001f5c271529f627522b9ef8575
+PODFILE CHECKSUM: 79f19327a472094b5a8b6147f534db63a3183581
 
 COCOAPODS: 1.7.5

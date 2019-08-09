@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Alamofire
 
 class SignUpViewController: UIViewController {
     
@@ -60,7 +60,41 @@ class SignUpViewController: UIViewController {
     // funcion que se ejecuta cuando se envia el formulario
     @IBAction func buttonSignUp(_ sender: Any) {
         if areFieldsValid(){
-            print("Se Registro con exito")
+            let params = [
+                "nombre": nameTextField.text as Any,
+                "cedula": identificationTextField.text as Any,
+                "nacimiento": birthTextField.text as Any,
+                "email": emailTextField.text as Any,
+                "city": cityTextField.text as Any,
+                "number": numberTextField.text as Any,
+                "password": passTextField.text as Any
+            ]
+
+            ApiService.shared().post(endpoint: "crearPrueba", params: params) {[weak self] (error, response) in
+                guard self != nil else { return }
+
+                if error == nil {
+                    
+                    let response = response as! APIServiceResponseModel
+                    if response.messageType == .Confirmation {
+                        
+                        //lo que se muestra si se registra con exito
+                        self?.showAlert(
+                            tittle: Constants.Texts.error,
+                            message: Constants.Texts.SignUp.wssuccess
+                        )
+                        
+                    } else {
+                        
+                        let mensaje = response.messageText
+                        print(mensaje)
+                        self?.showAlert(
+                            tittle: Constants.Texts.error,
+                            message: Constants.Texts.SignUp.wsfailure
+                        )
+                    }
+                }
+            }
         }
     }
     
@@ -137,6 +171,14 @@ class SignUpViewController: UIViewController {
             showAlert(
                 tittle: Constants.Texts.error,
                 message: Constants.Texts.SignUp.fieldPassConfirm
+            )
+            return false
+        }
+        
+        if pass != passConfirm{
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignUp.fieldPassConfirmDiferent
             )
             return false
         }

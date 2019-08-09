@@ -47,6 +47,8 @@
 		94A6002122F514820058888D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94A6002022F514820058888D /* GoogleService-Info.plist */; };
 		94A6002422F516970058888D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6002222F5168B0058888D /* Bolts.framework */; };
 		94A6002522F516970058888D /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94A6002222F5168B0058888D /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		94C1487122FCD88D00F57322 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1487022FCD88D00F57322 /* ApiService.swift */; };
+		94C1487422FCDBF800F57322 /* APIServiceResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1487322FCDBF800F57322 /* APIServiceResponseModel.swift */; };
 		94D3E17A22FB0C3F002555E8 /* RecoveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3E17922FB0C3F002555E8 /* RecoveryViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +108,8 @@
 		94A6001522F5122B0058888D /* FacebookCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookCore.framework; path = Carthage/Build/iOS/FacebookCore.framework; sourceTree = "<group>"; };
 		94A6002022F514820058888D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94A6002222F5168B0058888D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Carthage/Build/iOS/Bolts.framework; sourceTree = "<group>"; };
+		94C1487022FCD88D00F57322 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		94C1487322FCDBF800F57322 /* APIServiceResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceResponseModel.swift; sourceTree = "<group>"; };
 		94D3E17922FB0C3F002555E8 /* RecoveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryViewModel.swift; sourceTree = "<group>"; };
 		E38C57086FC5FC80D9341848 /* Pods_Jobs_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jobs_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E853BD4B629A93EDFE3D683F /* Pods-Jobs App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jobs App.debug.xcconfig"; path = "Target Support Files/Pods-Jobs App/Pods-Jobs App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 		946D70D022F3B03B00929B64 /* Jobs App */ = {
 			isa = PBXGroup;
 			children = (
+				94C1487222FCDBD600F57322 /* Models */,
 				946D70E722F3B27B00929B64 /* Resources */,
 				946D70E622F3B26D00929B64 /* Controllers */,
 				946D70E522F3B26000929B64 /* Constants */,
@@ -196,6 +201,7 @@
 		946D70E422F3B25600929B64 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				94C1487022FCD88D00F57322 /* ApiService.swift */,
 				94A6002022F514820058888D /* GoogleService-Info.plist */,
 				946D70DA22F3B03D00929B64 /* LaunchScreen.storyboard */,
 				946D70D122F3B03B00929B64 /* AppDelegate.swift */,
@@ -336,6 +342,14 @@
 				946D710022F3B86A00929B64 /* Publication.storyboard */,
 			);
 			path = Publication;
+			sourceTree = "<group>";
+		};
+		94C1487222FCDBD600F57322 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94C1487322FCDBF800F57322 /* APIServiceResponseModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FC379EA1D5971A17DED13D70 /* Frameworks */ = {
@@ -504,6 +518,7 @@
 				946D70D222F3B03B00929B64 /* AppDelegate.swift in Sources */,
 				946D710F22F3B8B200929B64 /* HomeViewController.swift in Sources */,
 				946D70FF22F3B84200929B64 /* ViewController.swift in Sources */,
+				94C1487122FCD88D00F57322 /* ApiService.swift in Sources */,
 				946D710322F3B87200929B64 /* PublicationViewController.swift in Sources */,
 				946D70FB22F3B79700929B64 /* Constants.swift in Sources */,
 				946D710B22F3B89A00929B64 /* MessageViewController.swift in Sources */,
@@ -513,6 +528,7 @@
 				946D712122F3B97E00929B64 /* SignUpViewController.swift in Sources */,
 				946D711322F3B91300929B64 /* CommentViewController.swift in Sources */,
 				9427B99E22FA36C5003D5BE6 /* RecoveryViewController.swift in Sources */,
+				94C1487422FCDBF800F57322 /* APIServiceResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
