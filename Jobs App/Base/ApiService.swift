@@ -16,8 +16,8 @@ public enum HttpStatusCode : Int {
 }
 
 protocol ApiServiceProtocol {
-    func get(endpoint: String, params: [String : Any]?, callback: @escaping (Any?, Any?) -> Void)
-    func post(endpoint: String, params: [String : Any]?, callback: @escaping (Any?, Any?) -> Void)
+    func get(endpoint: String, params: [String : Any]?, completionBlock: @escaping (Any?, Any?) -> Void)
+    func post(endpoint: String, params: [String : Any]?, completionBlock: @escaping (Any?, Any?) -> Void)
 }
 
 class ApiService : NSObject, ApiServiceProtocol {
@@ -48,7 +48,7 @@ class ApiService : NSObject, ApiServiceProtocol {
         return params
     }
     
-    func get(endpoint: String, params: [String : Any]?, callback: @escaping (Any?, Any?) -> Void) {
+    func get(endpoint: String, params: [String : Any]?, completionBlock: @escaping (Any?, Any?) -> Void) {
         Alamofire.request(endpoint, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { response in
             if (response.response != nil) {
                 let status = response.response!.statusCode
@@ -56,19 +56,19 @@ class ApiService : NSObject, ApiServiceProtocol {
                 switch status {
                 case HttpStatusCode.SUCCESS.rawValue:
                     if let value = response.result.value {
-                        // call callback with no error
-                        callback(nil, value)
+                        // call completionBlock with no error
+                        completionBlock(nil, value)
                     }
                 default:
-                    callback(Error.self, nil)
+                    completionBlock(Error.self, nil)
                 }
             } else {
-                callback(Error.self, nil)
+                completionBlock(Error.self, nil)
             }
         }
     }
     
-    func post(endpoint: String, params: [String : Any]?, callback: @escaping (Any?, Any?) -> Void) {
+    func post(endpoint: String, params: [String : Any]?, completionBlock: @escaping (Any?, Any?) -> Void) {
         let serviceParams = constructParameters(serviceName: endpoint, info: params)
         
         Alamofire.request(BASIC_URL, method: .post, parameters: serviceParams, encoding: JSONEncoding.default).responseJSON { response in
@@ -79,14 +79,14 @@ class ApiService : NSObject, ApiServiceProtocol {
                     case HttpStatusCode.SUCCESS.rawValue:
                         if let value = response.result.value {
                             let successResponse = APIServiceResponseModel.fromDictionary(value as! [String : Any])
-                            // call callback with no error
-                            callback(nil, successResponse)
+                            // call completionBlock with no error
+                            completionBlock(nil, successResponse)
                         }
                     default:
-                        callback(Error.self, nil)
+                        completionBlock(Error.self, nil)
                 }
             } else {
-                callback(Error.self, nil)
+                completionBlock(Error.self, nil)
             }
         }
     }
