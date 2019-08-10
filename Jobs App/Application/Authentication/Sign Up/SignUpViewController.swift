@@ -70,7 +70,7 @@ class SignUpViewController: UIViewController {
                 "password": passTextField.text as Any
             ]
 
-            ApiService.shared().post(endpoint: "crearPrueba", params: params) {[weak self] (error, response) in
+            ApiService.shared().post(endpoint: "crearPruebas", params: params) {[weak self] (error, response) in
                 guard self != nil else { return }
 
                 if error == nil {
@@ -81,16 +81,14 @@ class SignUpViewController: UIViewController {
                         //lo que se muestra si se registra con exito
                         self?.showAlert(
                             tittle: Constants.Texts.error,
-                            message: Constants.Texts.SignUp.wssuccess
+                            message: Constants.Texts.SignUp.tittleCondition
                         )
                         
                     } else {
-                        
-                        let mensaje = response.messageText
-                        print(mensaje)
+
                         self?.showAlert(
                             tittle: Constants.Texts.error,
-                            message: Constants.Texts.SignUp.wsfailure
+                            message: response.messageText
                         )
                     }
                 }
