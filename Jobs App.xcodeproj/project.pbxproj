@@ -266,7 +266,6 @@
 			children = (
 				946D711A22F3B94300929B64 /* SignInViewModel.swift */,
 				946D711822F3B93B00929B64 /* SignInViewController.swift */,
-				946D711622F3B93400929B64 /* SignIn.storyboard */,
 			);
 			path = "Sign In";
 			sourceTree = "<group>";
@@ -275,7 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				946D712022F3B97E00929B64 /* SignUpViewController.swift */,
-				946D711E22F3B95F00929B64 /* SignUpViewModel.swift */,
 				946D711C22F3B95500929B64 /* SignUp.storyboard */,
 			);
 			path = "Sign Up";
@@ -348,6 +346,8 @@
 			isa = PBXGroup;
 			children = (
 				94C1487322FCDBF800F57322 /* APIServiceResponseModel.swift */,
+				946D711E22F3B95F00929B64 /* SignUpViewModel.swift */,
+				946D711622F3B93400929B64 /* SignIn.storyboard */,
 			);
 			path = Models;
 			sourceTree = "<group>";
