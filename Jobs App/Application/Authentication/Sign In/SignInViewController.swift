@@ -22,7 +22,7 @@ class SignInViewController: UIViewController {
     // Aqui se administra el splash screem
     let revealingSplashScreem =
         RevealingSplashView(iconImage: UIImage(
-            named: "LaunchScreen")!,
+            named: Constants.Texts.SignIn.launchScreen)!,
             iconInitialSize: CGSize(
                 width: 80,
                 height: 80
@@ -68,15 +68,15 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func facebookLogin(_ sender: Any) {
-        SignInViewModel.facebookLogin(viewController: self,handler: { [weak self] (success, error) in
+        SignInViewModel.facebookLogin(viewController: self, handler: { [weak self] (success, error) in
+            
             if let error = error {
                 let alert = UIAlertController(
-                    title: "Error",
+                    title: Constants.Texts.error,
                     message: error.localizedDescription,
                     preferredStyle: .alert
                 )
-                let ok =
-                    UIAlertAction(
+                let ok = UIAlertAction(
                         title: Constants.Texts.SignIn.titlePopUp,
                         style: .default,
                         handler: nil
@@ -90,8 +90,15 @@ class SignInViewController: UIViewController {
                 return
             }
             
-            if success {
-                self?.performSegue(
+            if (error == nil){
+                self!.showAlert(
+                    tittle: Constants.Texts.error,
+                    message: Constants.Texts.SignIn.messagePermission
+                )
+                return
+            }
+            
+            if success { self?.performSegue(
                     withIdentifier: Constants.Texts.SignIn.goToMain,
                     sender: self
                 )

@@ -35,6 +35,12 @@ struct Constants {
             // Titulo del pop-up
             static let titlePopUp    = "Ok"
             
+            // Detalle del pop-up cuando no acepta los permisos de Facebook
+            static let messagePermission    = "Rechazo los permisos para inicar sesión con Facebook"
+            
+            // Nombre del LaunchScreem
+            static let launchScreen    = "LaunchScreen"
+            
             
         }
         

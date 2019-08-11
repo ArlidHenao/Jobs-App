@@ -23,6 +23,11 @@ class SignInViewModel: NSObject {
                 return
             }
             
+            if result!.isCancelled{
+                handler?(false, Error.self as? Error)
+                return
+            }
+            
             guard let token = FBSDKAccessToken.current()?.tokenString else { return }
             let credentials = FacebookAuthProvider.credential(withAccessToken: token)
             Auth.auth().signIn(with: credentials, completion: { (authResult, error) in
