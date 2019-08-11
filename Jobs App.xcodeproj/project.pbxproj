@@ -147,7 +147,6 @@
 			children = (
 				9427B99B22FA35DC003D5BE6 /* Recovery.storyboard */,
 				9427B99D22FA36C5003D5BE6 /* RecoveryViewController.swift */,
-				94D3E17922FB0C3F002555E8 /* RecoveryViewModel.swift */,
 			);
 			path = Recovery;
 			sourceTree = "<group>";
@@ -345,6 +344,7 @@
 		94C1487222FCDBD600F57322 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				94D3E17922FB0C3F002555E8 /* RecoveryViewModel.swift */,
 				94C1487322FCDBF800F57322 /* APIServiceResponseModel.swift */,
 				946D711E22F3B95F00929B64 /* SignUpViewModel.swift */,
 				946D711622F3B93400929B64 /* SignIn.storyboard */,
