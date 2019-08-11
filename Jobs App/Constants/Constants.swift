@@ -20,7 +20,7 @@ struct Constants {
             
             // Se valida que los campos esten llenos
             static let errorUserField = "El correo no es valido"
-            static let errorPassField = "El correo no es valido"
+            static let errorPassField = "La Contraseña no es valido"
             
             // Se valida el inicio de Sesiòn
             static let errorSignIn    = "El CORREO o la CONTRASEÑA son incorrectos"

@@ -70,6 +70,7 @@ class SignUpViewController: UIViewController {
                 "password": passTextField.text as Any
             ]
 
+            // Llama la función .post en el archivo ApiService y le envia los parametros
             ApiService.shared().post(endpoint: "crearPruebas", params: params) {[weak self] (error, response) in
                 guard self != nil else { return }
 
@@ -77,8 +78,8 @@ class SignUpViewController: UIViewController {
                     
                     let response = response as! APIServiceResponseModel
                     if response.messageType == .Confirmation {
-                        
                         //lo que se muestra si se registra con exito
+                        
                         self?.showAlert(
                             tittle: Constants.Texts.error,
                             message: Constants.Texts.SignUp.tittleCondition
@@ -98,18 +99,9 @@ class SignUpViewController: UIViewController {
     
     //funcion que valida los campos de la interfaz de registro
     private func areFieldsValid() -> Bool {
-        // se recibe el valor del campo
-        let name = nameTextField.text
-        let identification = identificationTextField.text
-        let birth = birthTextField.text
-        let email = emailTextField.text
-        let city = cityTextField.text
-        let number = numberTextField.text
-        let pass = passTextField.text
-        let passConfirm = confirmPassTextField.text
         
         // Se verifica que los campos no esten vacios
-        if name!.isEmpty{
+        guard let name = nameTextField.text, !name.isEmpty else {
             showAlert(
                 tittle: Constants.Texts.error,
                 message: Constants.Texts.SignUp.fieldName
@@ -117,7 +109,7 @@ class SignUpViewController: UIViewController {
             return false
         }
         
-        if identification!.isEmpty{
+        guard let identification = identificationTextField.text, !identification.isEmpty else {
             showAlert(
                 tittle: Constants.Texts.error,
                 message: Constants.Texts.SignUp.fieldIdentification
@@ -125,7 +117,7 @@ class SignUpViewController: UIViewController {
             return false
         }
         
-        if birth!.isEmpty {
+        guard let birth = birthTextField.text, !birth.isEmpty else {
             showAlert(
                 tittle: Constants.Texts.error,
                 message: Constants.Texts.SignUp.fieldBirth
@@ -133,15 +125,15 @@ class SignUpViewController: UIViewController {
             return false
         }
         
-        if email!.isEmpty {
+        guard let email = emailTextField.text, !email.isEmpty else {
             showAlert(
                 tittle: Constants.Texts.error,
-                message: Constants.Texts.SignUp.fieldEmail
+                message: Constants.Texts.SignIn.userFieldEmpty
             )
             return false
         }
         
-        if city!.isEmpty {
+        guard let city = cityTextField.text, !city.isEmpty else {
             showAlert(
                 tittle: Constants.Texts.error,
                 message: Constants.Texts.SignUp.fieldCity
@@ -149,7 +141,7 @@ class SignUpViewController: UIViewController {
             return false
         }
         
-        if number!.isEmpty {
+        guard let number = numberTextField.text, !number.isEmpty else {
             showAlert(
                 tittle: Constants.Texts.error,
                 message: Constants.Texts.SignUp.fieldNumber
@@ -157,7 +149,7 @@ class SignUpViewController: UIViewController {
             return false
         }
         
-        if pass!.isEmpty {
+        guard let pass = passTextField.text, !pass.isEmpty else {
             showAlert(
                 tittle: Constants.Texts.error,
                 message: Constants.Texts.SignUp.fieldPass
@@ -165,7 +157,7 @@ class SignUpViewController: UIViewController {
             return false
         }
         
-        if passConfirm!.isEmpty {
+        guard let passConfirm = confirmPassTextField.text, !passConfirm.isEmpty else {
             showAlert(
                 tittle: Constants.Texts.error,
                 message: Constants.Texts.SignUp.fieldPassConfirm
@@ -177,6 +169,22 @@ class SignUpViewController: UIViewController {
             showAlert(
                 tittle: Constants.Texts.error,
                 message: Constants.Texts.SignUp.fieldPassConfirmDiferent
+            )
+            return false
+        }
+        
+        if !validate(text: email, regex: Constants.Texts.SignIn.expresionRegularEmail) {
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignIn.errorUserField
+            )
+            return false
+        }
+        
+        if !validate(text: pass, regex: Constants.Texts.SignIn.expresionRegularPass) {
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignIn.errorPassField
             )
             return false
         }

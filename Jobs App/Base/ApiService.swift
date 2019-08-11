@@ -68,6 +68,7 @@ class ApiService : NSObject, ApiServiceProtocol {
         }
     }
     
+    // Esta función recbe tres parametros (endpoint, params, funcion anonima)
     func post(endpoint: String, params: [String : Any]?, completionBlock: @escaping (Any?, Any?) -> Void) {
         let serviceParams = constructParameters(serviceName: endpoint, info: params)
         
