@@ -68,9 +68,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func facebookLogin(_ sender: Any) {
-        SignInViewModel.facebookLogin(
-            viewController: self,
-            handler: { [weak self] (success, error) in
+        SignInViewModel.facebookLogin(viewController: self,handler: { [weak self] (success, error) in
             if let error = error {
                 let alert = UIAlertController(
                     title: "Error",
