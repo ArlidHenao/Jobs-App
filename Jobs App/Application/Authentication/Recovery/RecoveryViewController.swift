@@ -29,12 +29,18 @@ class RecoveryViewController: UIViewController {
     
     //funcion que valida los campos de la interfaz de login
     private func areFieldsValid() -> Bool {
-        let email = emailTextField.text
-
-        if email!.isEmpty{
+        guard let email = emailTextField.text, !email.isEmpty else {
             showAlert(
                 tittle: Constants.Texts.error,
-                message: Constants.Texts.SignUp.fieldEmail
+                message: Constants.Texts.SignIn.userFieldEmpty
+            )
+            return false
+        }
+        
+        if !validate(text: email, regex: Constants.Texts.SignIn.expresionRegularEmail) {
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignIn.errorUserField
             )
             return false
         }
