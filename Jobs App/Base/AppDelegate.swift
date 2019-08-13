@@ -9,13 +9,30 @@
 import UIKit
 import Firebase
 import FBSDKLoginKit
+import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate{
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        //if any error stop and print the error
+        if error != nil{
+            print(error ?? "google error")
+            return
+        }
+        _ = user.profile.name
+        _ = user.profile.email
+    }
+    
     
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // Use Firebase library to configure APIs
+        FirebaseApp.configure()
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
         
         // instanciar el inicio de sesion con facebook
         FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -24,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         let _ = LocalNotificationsController()
         
         // instanciar firebase
-        FirebaseApp.configure()
+        //FirebaseApp.configure()
         
         // Override point for customization after application launch.
         return true
@@ -56,9 +73,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         if FBSDKApplicationDelegate.sharedInstance()?.application(app, open: url, options: options) ?? false {
             return true
         }
+        
+        if GIDSignIn.sharedInstance().handle(url as URL,sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation]){
+            return true
+        }
+        
         return true
     }
-    
 
 }
 

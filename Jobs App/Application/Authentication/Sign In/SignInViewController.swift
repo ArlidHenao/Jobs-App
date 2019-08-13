@@ -11,11 +11,13 @@ import RevealingSplashView
 import FirebaseAuth
 import GoogleSignIn
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, GIDSignInUIDelegate{
     
     //se llaman los elementos de storyboard
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
+    
     
     private var viewModel = SignInViewModel()
     
@@ -38,6 +40,9 @@ class SignInViewController: UIViewController {
         self.revealingSplashScreem.animationType = SplashAnimationType.popAndZoomOut
         self.revealingSplashScreem.startAnimation()
         //fin
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
         
         // Do any additional setup after loading the view.
     }
@@ -105,7 +110,6 @@ class SignInViewController: UIViewController {
             }
         })
     }
-    
     
     //funcion que valida los campos de la interfaz de login
     private func areFieldsValid() -> Bool {

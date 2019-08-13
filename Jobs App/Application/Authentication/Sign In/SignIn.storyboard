@@ -232,6 +232,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="UeK-XQ-srt" id="pZF-x2-GRy"/>
                         <outlet property="passwordTextField" destination="7SF-7Q-0rd" id="LoX-uO-ALt"/>
+                        <outlet property="signInButton" destination="9lo-ea-WHf" id="yPU-8T-t0o"/>
                         <segue destination="9y4-oe-th9" kind="presentation" identifier="goToMain" id="aJG-NC-yEX"/>
                     </connections>
                 </viewController>
