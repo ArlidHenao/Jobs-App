@@ -50,25 +50,38 @@ class RecoveryViewController: UIViewController {
     //fin
     
     // Alerta que se ejecuta al oprimir el boton de recuperar
-    @IBAction func alertRecovery(_ sender: Any) {
+    @IBAction func buttonRecovery(_ sender: Any) {
         if areFieldsValid(){
-            let alertController = UIAlertController(
-                title: Constants.Texts.Recover.tittleCondition,
-                message: Constants.Texts.Recover.messageCondition,
-                preferredStyle: .alert
-            )
             
-            alertController.addAction(UIAlertAction(
-                title: Constants.Texts.Recover.buttonCondition,
-                style: .default)
-            )
+            let params = [
+                "nombre": emailTextField.text as Any,
+            ]
             
-            self.present(
-                alertController,
-                animated: true,
-                completion: nil
-            )
-            
+            // Llama la función .post en el archivo ApiService y le envia los parametros
+            ApiService.shared().post(endpoint: "crearPruebas", params: params) {[weak self] (error, response) in
+                guard self != nil else { return }
+                
+                if error == nil {
+                    
+                    let response = response as! APIServiceResponseModel
+                    if response.messageType == .Confirmation {
+                        //lo que se muestra si se registra con exito
+                        
+                        self?.showAlert(
+                            tittle: Constants.Texts.error,
+                            message: Constants.Texts.SignUp.tittleCondition
+                        )
+                        
+                    } else {
+                        
+                        self?.showAlert(
+                            tittle: Constants.Texts.error,
+                            message: response.messageText
+                        )
+                    }
+                }
+            }
+
         }
     }
     
