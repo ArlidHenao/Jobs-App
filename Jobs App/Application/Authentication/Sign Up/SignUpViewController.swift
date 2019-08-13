@@ -20,6 +20,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var numberTextField: UITextField!
     @IBOutlet weak var passTextField: UITextField!
     @IBOutlet weak var confirmPassTextField: UITextField!
+    @IBOutlet weak var checkBoxCondition: UISwitch!
+    
     
     //
     override func viewDidLoad() {
@@ -71,7 +73,7 @@ class SignUpViewController: UIViewController {
             ]
 
             // Llama la función .post en el archivo ApiService y le envia los parametros
-            ApiService.shared().post(endpoint: "crearPruebas", params: params) {[weak self] (error, response) in
+            ApiService.shared().post(endpoint: "crearPrueba", params: params) {[weak self] (error, response) in
                 guard self != nil else { return }
 
                 if error == nil {
@@ -101,6 +103,15 @@ class SignUpViewController: UIViewController {
     private func areFieldsValid() -> Bool {
         
         // Se verifica que los campos no esten vacios
+        
+        if checkBoxCondition.isSelected == false{
+            showAlert(
+                tittle: Constants.Texts.error,
+                message: Constants.Texts.SignUp.errorCheckBox
+            )
+            return false
+        }
+        
         guard let name = nameTextField.text, !name.isEmpty else {
             showAlert(
                 tittle: Constants.Texts.error,
@@ -173,21 +184,21 @@ class SignUpViewController: UIViewController {
             return false
         }
         
-        if !validate(text: email, regex: Constants.Texts.SignIn.expresionRegularEmail) {
-            showAlert(
-                tittle: Constants.Texts.error,
-                message: Constants.Texts.SignIn.errorUserField
-            )
-            return false
-        }
-        
-        if !validate(text: pass, regex: Constants.Texts.SignIn.expresionRegularPass) {
-            showAlert(
-                tittle: Constants.Texts.error,
-                message: Constants.Texts.SignIn.errorPassField
-            )
-            return false
-        }
+//        if !validate(text: email, regex: Constants.Texts.SignIn.expresionRegularEmail) {
+//            showAlert(
+//                tittle: Constants.Texts.error,
+//                message: Constants.Texts.SignIn.errorUserField
+//            )
+//            return false
+//        }
+//
+//        if !validate(text: pass, regex: Constants.Texts.SignIn.expresionRegularPass) {
+//            showAlert(
+//                tittle: Constants.Texts.error,
+//                message: Constants.Texts.SignIn.errorPassField
+//            )
+//            return false
+//        }
         
         return true
     }

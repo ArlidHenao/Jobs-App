@@ -248,6 +248,7 @@
                     <navigationItem key="navigationItem" title="Registro" leftItemsSupplementBackButton="YES" id="A4H-i2-i0d"/>
                     <connections>
                         <outlet property="birthTextField" destination="3YG-1L-uIt" id="edP-Dw-mp9"/>
+                        <outlet property="checkBoxCondition" destination="VLn-Kq-RD9" id="1TJ-Sx-VAo"/>
                         <outlet property="cityTextField" destination="vXm-NV-zYE" id="zhp-7o-Jxh"/>
                         <outlet property="confirmPassTextField" destination="dNJ-M9-yzC" id="iPC-5e-bZS"/>
                         <outlet property="emailTextField" destination="GwW-Da-hdq" id="qWi-gl-JUW"/>

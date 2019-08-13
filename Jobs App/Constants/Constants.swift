@@ -80,6 +80,7 @@ struct Constants {
             static let fieldPassConfirmDiferent = "Las CONTRASEÑAS no son iguales"
             static let wssuccess = "Registro"
             static let wsfailure = "Error"
+            static let errorCheckBox = "Se deben aceptar los terminos y condiciones"
         }
         
         struct AppDelegate {
