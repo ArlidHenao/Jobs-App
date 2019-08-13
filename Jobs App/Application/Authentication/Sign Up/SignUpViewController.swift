@@ -23,10 +23,15 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var checkBoxCondition: UISwitch!
     
     
+    
+    
     //
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // el CheckBox por defecto es apagado
+        checkBoxCondition.setOn(false, animated: true)
+
         //crear boton de volver atras (1)
         let leftBtn = UIButton(type: .custom)
         leftBtn.setImage(UIImage(named: Constants.Texts.SignUp.iconBehind), for: .normal)
@@ -103,8 +108,8 @@ class SignUpViewController: UIViewController {
     private func areFieldsValid() -> Bool {
         
         // Se verifica que los campos no esten vacios
-        
-        if checkBoxCondition.isSelected == false{
+      
+        if !checkBoxCondition.isOn{
             showAlert(
                 tittle: Constants.Texts.error,
                 message: Constants.Texts.SignUp.errorCheckBox
