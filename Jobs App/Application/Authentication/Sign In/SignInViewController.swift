@@ -40,10 +40,7 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate{
         self.revealingSplashScreem.animationType = SplashAnimationType.popAndZoomOut
         self.revealingSplashScreem.startAnimation()
         //fin
-        
-        GIDSignIn.sharedInstance().uiDelegate = self
-        GIDSignIn.sharedInstance().signIn()
-        
+
         // Do any additional setup after loading the view.
     }
     
@@ -71,6 +68,13 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate{
             }
         }
     }
+    
+    // se llama el inicio de sesion con Google
+    @IBAction func googleLogin(_ sender: Any) {
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
     
     @IBAction func facebookLogin(_ sender: Any) {
         SignInViewModel.facebookLogin(viewController: self, handler: { [weak self] (success, error) in

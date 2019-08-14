@@ -20,10 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             print(error ?? "google error")
             return
         }
-        _ = user.profile.name
-        _ = user.profile.email
+        let name = user.profile.name
+        let email = user.profile.email
+        
+        print(name as Any, email as Any)
     }
     
+    //project-656043677217
     
     var window: UIWindow?
 

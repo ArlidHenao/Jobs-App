@@ -36,4 +36,10 @@ class SignInViewModel: NSObject {
             })
         }
     }
+    
+    static func googleLogin(viewController: UIViewController, handler: SignInHandler?){
+        
+    }
 }
+
+

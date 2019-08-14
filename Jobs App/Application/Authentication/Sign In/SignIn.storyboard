@@ -97,6 +97,9 @@
                                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="googleLogin:" destination="kMW-HX-DTW" eventType="touchUpInside" id="vTP-CO-VZX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
