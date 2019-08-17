@@ -99,14 +99,6 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate{
                 return
             }
             
-            if (error == nil){
-                self!.showAlert(
-                    tittle: Constants.Texts.error,
-                    message: Constants.Texts.SignIn.messagePermission
-                )
-                return
-            }
-            
             if success { self?.performSegue(
                     withIdentifier: Constants.Texts.SignIn.goToMain,
                     sender: self

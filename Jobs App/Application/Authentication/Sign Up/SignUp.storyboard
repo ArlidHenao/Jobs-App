@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Registro-->
+        <!--REGISTRO-->
         <scene sceneID="SdF-U1-JqQ">
             <objects>
                 <viewController id="uTL-Kq-e70" customClass="SignUpViewController" customModule="Jobs_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -245,7 +245,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LxD-Hu-QSm"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Registro" leftItemsSupplementBackButton="YES" id="A4H-i2-i0d"/>
+                    <navigationItem key="navigationItem" title="REGISTRO" leftItemsSupplementBackButton="YES" id="A4H-i2-i0d"/>
                     <connections>
                         <outlet property="birthTextField" destination="3YG-1L-uIt" id="edP-Dw-mp9"/>
                         <outlet property="checkBoxCondition" destination="VLn-Kq-RD9" id="1TJ-Sx-VAo"/>
