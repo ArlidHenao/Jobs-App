@@ -24,7 +24,7 @@ class SignInViewModel: NSObject {
             }
             
             if result!.isCancelled{
-                handler?(false, Error.self as? Error)
+                handler?(false, nil)
                 return
             }
             
