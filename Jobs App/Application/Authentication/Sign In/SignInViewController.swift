@@ -44,44 +44,6 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate{
         // Do any additional setup after loading the view.
     }
     
-    
-//    if areFieldsValid(){
-//    let params = [
-//    "nombre": nameTextField.text as Any,
-//    "cedula": identificationTextField.text as Any,
-//    "nacimiento": birthTextField.text as Any,
-//    "email": emailTextField.text as Any,
-//    "city": cityTextField.text as Any,
-//    "number": numberTextField.text as Any,
-//    "password": passTextField.text as Any
-//    ]
-//
-//    // Llama la función .post en el archivo ApiService y le envia los parametros
-//    ApiService.shared().post(endpoint: "crearPrueba", params: params) {[weak self] (error, response) in
-//    guard self != nil else { return }
-//
-//    if error == nil {
-//
-//    let response = response as! APIServiceResponseModel
-//    if response.messageType == .Confirmation {
-//    //lo que se muestra si se registra con exito
-//
-//    self?.showAlert(
-//    tittle: Constants.Texts.error,
-//    message: Constants.Texts.SignUp.tittleCondition
-//    )
-//
-//    } else {
-//
-//    self?.showAlert(
-//    tittle: Constants.Texts.error,
-//    message: response.messageText
-//    )
-//    }
-//    }
-//    }
-//    }
-    
     //Se llama el boton de inicio del storyboard
     @IBAction func SignIn(_ sender: Any) {
         if areFieldsValid() {
