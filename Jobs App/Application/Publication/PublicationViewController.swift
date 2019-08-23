@@ -12,10 +12,23 @@ class PublicationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let leftBtn = UIButton(type: .custom)
+        leftBtn.setImage(UIImage(named: Constants.Texts.iconCloset), for: .normal)
+        leftBtn.imageView?.contentMode = .scaleAspectFit
+        leftBtn.addTarget(self, action: #selector(goToLogin(sender:)), for: .touchUpInside)
+        let leftBarButton = UIBarButtonItem(customView: leftBtn)
+        self.navigationItem.leftBarButtonItem = leftBarButton
 
         // Do any additional setup after loading the view.
     }
     
+    @objc func goToLogin(sender: UIButton) {
+        dismiss(
+            animated: true,
+            completion: nil
+        )
+    }
 
     /*
     // MARK: - Navigation

@@ -11,6 +11,7 @@ import Foundation
 struct Constants {
     struct Texts {
         static let error = "Error"
+        static let iconCloset = "icono-cerrar-sesion"
         
         struct SignIn {
 
